@@ -11,6 +11,7 @@ class Helpers:
     @staticmethod
     def read_yaml(yaml_path: Path) -> ConfigBox:
         try:
+            print(yaml_path)
             with open(yaml_path) as yaml_file:
                 content = yaml.safe_load(yaml_file)
                 logger.info(f"yaml file: {yaml_path} loaded successfully")
